@@ -7,7 +7,7 @@ Each test is a dict with
     "explanation" -- not necessarily a key, it's used for an additional info in animation.
 """
 from random import randint
-from my_solution import mountain_scape
+# from my_solution import mountain_scape
 
 TESTS = {
     "Basics": [
