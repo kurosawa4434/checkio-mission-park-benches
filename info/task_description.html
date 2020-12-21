@@ -1,0 +1,60 @@
+<!-- Describe task in general -->
+
+<p>
+    You will need to remove some benches to keep the social distance.
+</p>
+<p>
+You are given two arguments:
+    <ol>
+        <li>A list of the bench's detail (a tuple of the leftmost coordinate and the length).</li>
+        <li>The minimum social distance.</li>
+    </ol>
+You have to return the maximum total length of the benches that can leave.
+</p>
+
+<p><strong>NOTE:</strong></p>
+    <ul>
+        <li>The benches don't overlap each other.</li>
+        <li>A list of the bench's detail is sorted.</li>
+    </ul>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+park_benches([(0, 2), (3, 3)], 2) == 3                  # [(3, 3)]
+park_benches([(1, 3), (6, 5), (13, 4)], 3) == 7         # [(1, 3), (13, 4)]
+park_benches([(1, 2), (5, 6), (13, 3)], 3) == 6         # [(5, 6)]</pre>
+    <table>
+        <tr>
+            <td><img src="{{MEDIA}}example.png" style="max-height:200px; padding: 10px;"></td>
+        </tr>
+    </table>
+</div>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> Two arguments:
+    <ol>
+        <li>A list of tuples of two integers.</li>
+        <li>An integer.</li>
+    </ol>
+</p>
+
+<p>
+    <strong>Output: </strong> An integer.
+</p>
+
+
+
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>Precondition:</strong><br>
+    <ul>
+        <li>1 &le; len(benches) &le; 100</li>
+    </ul>
+</p> 
