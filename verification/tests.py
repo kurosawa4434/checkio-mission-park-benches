@@ -7,9 +7,35 @@ Each test is a dict with
     "explanation" -- not necessarily a key, it's used for an additional info in animation.
 """
 from random import randint
-# from my_solution import mountain_scape
+from my_solution import park_benches
+
+
+def make_random_tests(*nums):
+    random_tests = []
+    for num in nums:
+        benches = []
+        x = 0
+        for _ in range(num):
+            length = randint(1, 7)
+            dist = randint(1, 4)
+            benches.append((x + dist, length))
+            x += (dist + length)
+        social_distance = randint(2, 3)
+        result = park_benches(benches, social_distance)
+        answer = sum(r[1] for r in result)
+        explanation = []
+        for i, bench in enumerate(benches):
+            if bench not in result:
+                explanation.append(i)
+        random_tests.append({"input": [benches, social_distance],
+                             "answer": answer,
+                             "explanation": explanation})
+    print(random_tests)
+    return random_tests
+
 
 TESTS = {
+    "Rondoms": make_random_tests(3, 4, 5, 6, 7, 10, 20, 50, 70, 100),
     "Basics": [
         {
             "input": [[[0, 2], [3, 3]], 2],
